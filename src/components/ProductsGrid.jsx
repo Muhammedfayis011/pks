@@ -424,13 +424,25 @@ const ProductsGrid = () => {
           .search-box { width: 100%; max-width: none; }
         }
         @media (max-width: 576px) {
-          .fruits-grid { grid-template-columns: 1fr; gap: 16px; }
-          .fruit-img-wrapper { height: 250px; } /* taller image on full width mobile */
-          .filter-btn { padding: 8px 16px; font-size: 0.8rem; }
+          .fruits-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+          .fruit-img-wrapper { height: 150px; }
+          .fruit-card-body { padding: 12px 10px; }
+          .fruit-card-title { font-size: 0.95rem; }
+          .filter-btn { padding: 8px 14px; font-size: 0.78rem; }
         }
         @media (max-width: 400px) {
-          .fruit-img-wrapper { height: 200px; }
-          .bulk-content h3 { font-size: 1.4rem; }
+          .fruits-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+          .fruit-img-wrapper { height: 125px; }
+          .fruit-card-body { padding: 10px 8px; }
+          .fruit-card-title { font-size: 0.88rem; }
+          .bulk-content h3 { font-size: 1.3rem; }
+          .btn-pill-small { padding: 5px 10px; font-size: 0.72rem; }
+        }
+        @media (max-width: 360px) {
+          .fruits-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+          .fruit-img-wrapper { height: 110px; }
+          .fruit-card-body { padding: 8px 6px; }
+          .fruit-card-title { font-size: 0.82rem; }
         }
       `}</style>
     </section>

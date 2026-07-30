@@ -189,48 +189,52 @@ const HeroSection = () => {
 
         @media (max-width: 576px) {
           .hero-main-heading { font-size: 2.2rem; }
-          .hero-sub-heading { font-size: 1.05rem; }
+          .hero-sub-heading { font-size: 1rem; }
           .hero-button-group {
-            flex-direction: column;
-            width: 100%;
-            gap: 12px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: auto;
+            gap: 10px;
           }
           .btn-green-solid, .btn-outline-white {
-            width: 100%;
-            text-align: center;
-            padding: 14px 20px;
-            font-size: 0.9rem;
-            display: block;
+            width: auto;
+            padding: 9px 18px;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
           }
         }
 
         @media (max-width: 400px) {
           .hero-main-heading { font-size: 1.8rem; }
-          .hero-sub-heading { font-size: 0.95rem; }
+          .hero-sub-heading { font-size: 0.9rem; }
           .hero-fullscreen { padding-top: 120px; }
+          .hero-button-group { gap: 8px; }
           .btn-green-solid, .btn-outline-white {
-            padding: 12px 16px;
-            font-size: 0.85rem;
-            letter-spacing: 0.8px;
+            padding: 8px 14px;
+            font-size: 0.75rem;
+            letter-spacing: 0.3px;
           }
         }
 
         @media (max-width: 360px) {
-          .hero-main-heading { font-size: 1.6rem; }
-          .hero-sub-heading { font-size: 0.85rem; padding: 5px 12px; }
+          .hero-main-heading { font-size: 1.55rem; }
+          .hero-sub-heading { font-size: 0.8rem; padding: 4px 10px; }
+          .hero-button-group { gap: 6px; }
           .btn-green-solid, .btn-outline-white {
-            padding: 11px 14px;
-            font-size: 0.8rem;
-            letter-spacing: 0.5px;
+            padding: 7px 11px;
+            font-size: 0.7rem;
+            letter-spacing: 0.2px;
           }
-          .hero-button-group { gap: 10px; }
         }
 
         @media (max-width: 320px) {
-          .hero-main-heading { font-size: 1.45rem; }
+          .hero-main-heading { font-size: 1.4rem; }
           .btn-green-solid, .btn-outline-white {
-            padding: 10px 12px;
-            font-size: 0.78rem;
+            padding: 6px 9px;
+            font-size: 0.68rem;
           }
         }
 

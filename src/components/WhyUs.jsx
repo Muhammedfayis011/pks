@@ -173,13 +173,15 @@ const WhyUs = () => {
           .commitment-box { padding: 30px; }
         }
         @media (max-width: 576px) {
-          .why-grid { grid-template-columns: 1fr; gap: 20px; }
+          .why-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+          .why-card { padding: 20px 14px; }
           .commitment-check-list { grid-template-columns: 1fr; }
           .commitment-box { padding: 24px; }
         }
         @media (max-width: 400px) {
+          .why-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+          .why-card { padding: 16px 10px; }
           .commitment-box { padding: 20px 15px; }
-          .why-card { padding: 25px 20px; }
         }
       `}</style>
     </section>
