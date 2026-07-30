@@ -188,19 +188,19 @@ const HeroSection = () => {
         }
 
         @media (max-width: 576px) {
-          .hero-main-heading { font-size: 2.2rem; }
-          .hero-sub-heading { font-size: 1rem; }
+          .hero-main-heading { font-size: 2.6rem; line-height: 1.15; }
+          .hero-sub-heading { font-size: 0.85rem; padding: 5px 14px; letter-spacing: 0.8px; }
           .hero-button-group {
             flex-direction: row;
             flex-wrap: wrap;
             width: auto;
-            gap: 10px;
+            gap: 12px;
           }
           .btn-green-solid, .btn-outline-white {
             width: auto;
-            padding: 9px 18px;
-            font-size: 0.8rem;
-            letter-spacing: 0.5px;
+            padding: 11px 22px;
+            font-size: 0.85rem;
+            letter-spacing: 0.6px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -208,33 +208,34 @@ const HeroSection = () => {
         }
 
         @media (max-width: 400px) {
-          .hero-main-heading { font-size: 1.8rem; }
-          .hero-sub-heading { font-size: 0.9rem; }
+          .hero-main-heading { font-size: 2.15rem; }
+          .hero-sub-heading { font-size: 0.78rem; padding: 4px 12px; letter-spacing: 0.6px; }
           .hero-fullscreen { padding-top: 120px; }
+          .hero-button-group { gap: 10px; }
+          .btn-green-solid, .btn-outline-white {
+            padding: 10px 18px;
+            font-size: 0.8rem;
+            letter-spacing: 0.4px;
+          }
+        }
+
+        @media (max-width: 360px) {
+          .hero-main-heading { font-size: 1.85rem; }
+          .hero-sub-heading { font-size: 0.72rem; padding: 4px 10px; letter-spacing: 0.4px; }
           .hero-button-group { gap: 8px; }
           .btn-green-solid, .btn-outline-white {
-            padding: 8px 14px;
+            padding: 9px 15px;
             font-size: 0.75rem;
             letter-spacing: 0.3px;
           }
         }
 
-        @media (max-width: 360px) {
-          .hero-main-heading { font-size: 1.55rem; }
-          .hero-sub-heading { font-size: 0.8rem; padding: 4px 10px; }
-          .hero-button-group { gap: 6px; }
-          .btn-green-solid, .btn-outline-white {
-            padding: 7px 11px;
-            font-size: 0.7rem;
-            letter-spacing: 0.2px;
-          }
-        }
-
         @media (max-width: 320px) {
-          .hero-main-heading { font-size: 1.4rem; }
+          .hero-main-heading { font-size: 1.65rem; }
+          .hero-sub-heading { font-size: 0.68rem; }
           .btn-green-solid, .btn-outline-white {
-            padding: 6px 9px;
-            font-size: 0.68rem;
+            padding: 8px 12px;
+            font-size: 0.72rem;
           }
         }
 
