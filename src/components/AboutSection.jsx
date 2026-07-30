@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building, Globe2 } from 'lucide-react';
+import { Globe2 } from 'lucide-react';
 
 const AboutSection = () => {
   const exportMarkets = [
@@ -20,7 +20,7 @@ const AboutSection = () => {
           {/* Left Text */}
           <div className="about-text-content">
             <div className="section-tag">
-              <Building size={16} /> ABOUT PKS FRUITS
+              ABOUT PKS FRUITS
             </div>
             <h2 className="section-title">
               Connecting Global Farms <span>With Growing Markets</span>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { gccCountries } from '../data/fruitsData';
-import { Phone, Globe2, Plane, Ship, Building2 } from 'lucide-react';
+import { Phone, Plane, Ship, Building2 } from 'lucide-react';
 
 const GccSection = () => {
   return (
@@ -9,7 +9,7 @@ const GccSection = () => {
         <div className="gcc-card-wrapper">
           <div className="gcc-header">
             <div className="section-tag text-gold">
-              <Globe2 size={16} /> INTERNATIONAL EXPORT NETWORK
+              INTERNATIONAL EXPORT NETWORK
             </div>
             <h2 className="section-title text-white">
               Export to <span>GCC Countries</span>

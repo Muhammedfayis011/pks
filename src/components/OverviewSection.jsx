@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, Globe } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 const OverviewSection = () => {
   return (
@@ -9,7 +9,7 @@ const OverviewSection = () => {
           {/* Left Side Content */}
           <div className="overview-content animate-fade-up">
             <div className="section-tag">
-              <Globe size={16} /> LEADING INDIAN FRUIT TRADER
+              GLOBAL FRESH PRODUCE SUPPLIER
             </div>
             <h2 className="section-title overview-title-small">
               Delivering Premium Freshness
