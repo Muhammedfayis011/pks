@@ -173,15 +173,27 @@ const WhyUs = () => {
           .commitment-box { padding: 30px; }
         }
         @media (max-width: 576px) {
-          .why-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-          .why-card { padding: 20px 14px; }
+          .why-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+          .why-card { padding: 18px 14px; }
+          .icon-box { width: 44px; height: 44px; border-radius: 10px; }
+          .why-title { font-size: 1.1rem; margin-bottom: 8px; }
+          .why-desc { font-size: 0.85rem; line-height: 1.5; }
           .commitment-check-list { grid-template-columns: 1fr; }
           .commitment-box { padding: 24px; }
         }
         @media (max-width: 400px) {
-          .why-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-          .why-card { padding: 16px 10px; }
+          .why-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+          .why-card { padding: 15px 12px; }
+          .icon-box { width: 38px; height: 38px; }
+          .why-title { font-size: 1.02rem; }
+          .why-desc { font-size: 0.8rem; }
           .commitment-box { padding: 20px 15px; }
+        }
+        @media (max-width: 360px) {
+          .why-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+          .why-card { padding: 12px 10px; }
+          .why-title { font-size: 0.95rem; }
+          .why-desc { font-size: 0.76rem; }
         }
       `}</style>
     </section>
