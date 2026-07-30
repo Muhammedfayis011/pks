@@ -233,16 +233,34 @@ const GccSection = () => {
 
         @media (max-width: 992px) {
           .gcc-countries-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+          .gcc-country-badge:last-child {
+            grid-column: 1 / -1;
+            max-width: 50%;
+            margin: 0 auto;
+            width: 100%;
+          }
           .gcc-enquiry-box { flex-direction: column; text-align: center; gap: 24px; }
           .enquiry-info { flex-direction: column; }
           .gcc-logistics-grid { grid-template-columns: 1fr; gap: 20px; }
         }
         @media (max-width: 768px) {
           .gcc-countries-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+          .gcc-country-badge:last-child {
+            grid-column: 1 / -1;
+            max-width: 60%;
+            margin: 0 auto;
+            width: 100%;
+          }
         }
         @media (max-width: 576px) {
           .gcc-countries-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
           .gcc-country-badge { padding: 16px 8px; }
+          .gcc-country-badge:last-child {
+            grid-column: 1 / -1;
+            max-width: 70%;
+            margin: 0 auto;
+            width: 100%;
+          }
           .flag-icon { font-size: 2.1rem; margin-bottom: 6px; }
           .country-name { font-size: 0.88rem; }
           .enquiry-numbers { flex-direction: column; width: 100%; gap: 12px; }
@@ -252,6 +270,12 @@ const GccSection = () => {
         @media (max-width: 400px) {
           .gcc-countries-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
           .gcc-country-badge { padding: 14px 6px; }
+          .gcc-country-badge:last-child {
+            grid-column: 1 / -1;
+            max-width: 80%;
+            margin: 0 auto;
+            width: 100%;
+          }
           .flag-icon { font-size: 1.85rem; margin-bottom: 4px; }
           .country-name { font-size: 0.82rem; }
           .country-code { font-size: 0.68rem; }
@@ -260,6 +284,12 @@ const GccSection = () => {
         @media (max-width: 360px) {
           .gcc-countries-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
           .gcc-country-badge { padding: 12px 4px; }
+          .gcc-country-badge:last-child {
+            grid-column: 1 / -1;
+            max-width: 90%;
+            margin: 0 auto;
+            width: 100%;
+          }
           .flag-icon { font-size: 1.65rem; }
           .country-name { font-size: 0.78rem; }
         }
