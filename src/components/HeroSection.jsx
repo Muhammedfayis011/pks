@@ -188,13 +188,27 @@ const HeroSection = () => {
         }
 
         @media (max-width: 576px) {
-          .hero-main-heading { font-size: 2.6rem; line-height: 1.15; }
-          .hero-sub-heading { font-size: 0.85rem; padding: 5px 14px; letter-spacing: 0.8px; }
+          .hero-fullscreen {
+            padding-top: 130px;
+            padding-bottom: 60px;
+          }
+          .hero-main-heading {
+            font-size: 2.5rem;
+            line-height: 1.18;
+            margin-bottom: 26px; /* Extra gap after main heading */
+          }
+          .hero-sub-heading {
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            letter-spacing: 0.8px;
+            margin-bottom: 40px;
+          }
           .hero-button-group {
             flex-direction: row;
             flex-wrap: wrap;
             width: auto;
             gap: 12px;
+            margin-top: 30px; /* Moves buttons down towards bottom */
           }
           .btn-green-solid, .btn-outline-white {
             width: auto;
@@ -208,10 +222,18 @@ const HeroSection = () => {
         }
 
         @media (max-width: 400px) {
-          .hero-main-heading { font-size: 2.15rem; }
-          .hero-sub-heading { font-size: 0.78rem; padding: 4px 12px; letter-spacing: 0.6px; }
-          .hero-fullscreen { padding-top: 120px; }
-          .hero-button-group { gap: 10px; }
+          .hero-main-heading {
+            font-size: 2.1rem;
+            margin-bottom: 22px;
+          }
+          .hero-sub-heading {
+            font-size: 0.78rem;
+            padding: 5px 12px;
+            letter-spacing: 0.6px;
+            margin-bottom: 35px;
+          }
+          .hero-fullscreen { padding-top: 110px; padding-bottom: 50px; }
+          .hero-button-group { gap: 10px; margin-top: 25px; }
           .btn-green-solid, .btn-outline-white {
             padding: 10px 18px;
             font-size: 0.8rem;
@@ -220,9 +242,17 @@ const HeroSection = () => {
         }
 
         @media (max-width: 360px) {
-          .hero-main-heading { font-size: 1.85rem; }
-          .hero-sub-heading { font-size: 0.72rem; padding: 4px 10px; letter-spacing: 0.4px; }
-          .hero-button-group { gap: 8px; }
+          .hero-main-heading {
+            font-size: 1.8rem;
+            margin-bottom: 18px;
+          }
+          .hero-sub-heading {
+            font-size: 0.72rem;
+            padding: 4px 10px;
+            letter-spacing: 0.4px;
+            margin-bottom: 28px;
+          }
+          .hero-button-group { gap: 8px; margin-top: 20px; }
           .btn-green-solid, .btn-outline-white {
             padding: 9px 15px;
             font-size: 0.75rem;
@@ -231,8 +261,8 @@ const HeroSection = () => {
         }
 
         @media (max-width: 320px) {
-          .hero-main-heading { font-size: 1.65rem; }
-          .hero-sub-heading { font-size: 0.68rem; }
+          .hero-main-heading { font-size: 1.6rem; margin-bottom: 16px; }
+          .hero-sub-heading { font-size: 0.68rem; margin-bottom: 22px; }
           .btn-green-solid, .btn-outline-white {
             padding: 8px 12px;
             font-size: 0.72rem;
