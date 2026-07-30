@@ -1,5 +1,5 @@
 import React from 'react';
-import { Apple, Phone, Mail, MapPin, ChevronRight, Globe, ArrowUp } from 'lucide-react';
+import { Phone, Mail, ChevronRight, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building, MapPin, Globe2, Award, CheckCircle } from 'lucide-react';
+import { Building, Globe2 } from 'lucide-react';
 
 const AboutSection = () => {
   const exportMarkets = [

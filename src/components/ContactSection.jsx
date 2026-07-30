@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { MapPin, Phone, Mail, Send, CheckCircle2, Clock, Globe, ChevronRight } from 'lucide-react';
+import { MapPin, Phone, Mail, Send, CheckCircle2, Clock, ChevronRight } from 'lucide-react';
 
 const ContactSection = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);

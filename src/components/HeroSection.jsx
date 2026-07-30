@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Globe, ShieldCheck, Truck, Sparkles, CheckCircle2 } from 'lucide-react';
+
 
 const HeroSection = () => {
   return (

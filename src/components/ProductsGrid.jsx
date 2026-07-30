@@ -6,7 +6,6 @@ import { Search, Filter, ArrowUpRight, Sparkles, ShoppingBag, ChevronRight } fro
 const ProductsGrid = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedFruit, setSelectedFruit] = useState(null);
   const observerRef = useRef(null);
 
   const categories = ['All', 'Fresh Fruits', 'Bananas & Tropical', 'Citrus', 'Berries', 'Exotic & Special', 'Seasonal Specialties', 'Stone Fruits'];

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, CheckCircle2, Globe, Truck } from 'lucide-react';
+import { CheckCircle2, Globe } from 'lucide-react';
 
 const OverviewSection = () => {
   return (
