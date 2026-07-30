@@ -130,8 +130,7 @@ const ProductsGrid = () => {
           <div className="bulk-content">
             <h3>Bulk Supply & Global Export Enquiries</h3>
             <p>
-              Looking for custom sizing, private packaging, or scheduled reefer containers? 
-              Our trade specialists are ready to tailor export contracts for your market needs.
+              We supply wholesalers, supermarkets, retail chains, hotels, restaurants, catering companies, and food processing industries across India and GCC countries
             </p>
           </div>
           <a href="#contact" className="btn btn-primary">
