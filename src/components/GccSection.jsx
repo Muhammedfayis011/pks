@@ -238,17 +238,30 @@ const GccSection = () => {
           .gcc-logistics-grid { grid-template-columns: 1fr; gap: 20px; }
         }
         @media (max-width: 768px) {
-          .gcc-countries-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+          .gcc-countries-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
         }
         @media (max-width: 576px) {
-          .gcc-countries-grid { grid-template-columns: repeat(2, 1fr); }
+          .gcc-countries-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+          .gcc-country-badge { padding: 16px 8px; }
+          .flag-icon { font-size: 2.1rem; margin-bottom: 6px; }
+          .country-name { font-size: 0.88rem; }
           .enquiry-numbers { flex-direction: column; width: 100%; gap: 12px; }
           .phone-btn { width: 100%; justify-content: center; }
           .gcc-enquiry-box { padding: 24px; }
         }
         @media (max-width: 400px) {
-          .gcc-countries-grid { grid-template-columns: 1fr; gap: 12px; }
+          .gcc-countries-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+          .gcc-country-badge { padding: 14px 6px; }
+          .flag-icon { font-size: 1.85rem; margin-bottom: 4px; }
+          .country-name { font-size: 0.82rem; }
+          .country-code { font-size: 0.68rem; }
           .gcc-enquiry-box { padding: 20px 15px; }
+        }
+        @media (max-width: 360px) {
+          .gcc-countries-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+          .gcc-country-badge { padding: 12px 4px; }
+          .flag-icon { font-size: 1.65rem; }
+          .country-name { font-size: 0.78rem; }
         }
       `}</style>
     </section>
