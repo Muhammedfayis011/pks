@@ -428,7 +428,16 @@ const ContactSection = () => {
 
         @media (max-width: 992px) {
           .contact-grid { grid-template-columns: 1fr; }
+          .offices-grid { grid-template-columns: 1fr; }
           .form-row { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 576px) {
+          .contact-content { padding: 30px 20px; }
+          .office-card { padding: 20px; }
+        }
+        @media (max-width: 400px) {
+          .contact-content { padding: 25px 15px; }
+          .input-row { flex-direction: column; }
         }
       `}</style>
     </section>

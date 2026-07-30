@@ -282,6 +282,19 @@ const Navbar = () => {
           .nav-links, .nav-actions, .top-bar-right { display: none; }
           .mobile-toggle { display: block; }
         }
+        @media (max-width: 576px) {
+          .top-bar-left { font-size: 0.75rem; flex-wrap: wrap; justify-content: center; width: 100%; }
+          .top-bar-content { justify-content: center; }
+          .brand-logo h2 { font-size: 1.3rem; }
+          .brand-sub { font-size: 0.55rem; }
+          .navbar { padding: 8px 0; }
+        }
+        @media (max-width: 400px) {
+          .top-badge { display: none; }
+          .top-bar-left { font-size: 0.7rem; gap: 8px; }
+          .brand-logo h2 { font-size: 1.15rem; }
+          .mobile-toggle { font-size: 1.1rem; }
+        }
       `}</style>
     </header>
   );

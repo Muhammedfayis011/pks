@@ -209,6 +209,17 @@ const AboutSection = () => {
           .hubs-card { flex-direction: column; text-align: center; }
           .hub-divider { width: 100%; height: 1px; }
         }
+        @media (max-width: 768px) {
+          .about-image { height: 400px; }
+        }
+        @media (max-width: 576px) {
+          .about-image { height: 320px; }
+          .hubs-card { padding: 20px; }
+        }
+        @media (max-width: 400px) {
+          .about-image { height: 250px; }
+          .quote-box { padding: 12px 14px; font-size: 0.85rem; }
+        }
       `}</style>
     </section>
   );

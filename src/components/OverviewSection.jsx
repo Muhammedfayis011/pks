@@ -187,6 +187,18 @@ const OverviewSection = () => {
             display: none;
           }
         }
+        @media (max-width: 768px) {
+          .overview-grid { gap: 30px; }
+          .main-showcase { height: 400px; }
+        }
+        @media (max-width: 576px) {
+          .main-showcase { height: 350px; }
+          .highlight-boxes { grid-template-columns: 1fr; gap: 15px; }
+        }
+        @media (max-width: 400px) {
+          .main-showcase { height: 280px; }
+          .overview-content h2 { font-size: 1.8rem; }
+        }
       `}</style>
     </section>
   );

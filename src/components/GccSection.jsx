@@ -232,15 +232,23 @@ const GccSection = () => {
         }
 
         @media (max-width: 992px) {
-          .gcc-countries-grid { grid-template-columns: repeat(3, 1fr); }
+          .gcc-countries-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
           .gcc-enquiry-box { flex-direction: column; text-align: center; gap: 24px; }
           .enquiry-info { flex-direction: column; }
-          .gcc-logistics-grid { grid-template-columns: 1fr; }
+          .gcc-logistics-grid { grid-template-columns: 1fr; gap: 20px; }
+        }
+        @media (max-width: 768px) {
+          .gcc-countries-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
         }
         @media (max-width: 576px) {
           .gcc-countries-grid { grid-template-columns: repeat(2, 1fr); }
-          .enquiry-numbers { flex-direction: column; width: 100%; }
-          .phone-btn { width: 100%; align-items: center; }
+          .enquiry-numbers { flex-direction: column; width: 100%; gap: 12px; }
+          .phone-btn { width: 100%; justify-content: center; }
+          .gcc-enquiry-box { padding: 24px; }
+        }
+        @media (max-width: 400px) {
+          .gcc-countries-grid { grid-template-columns: 1fr; gap: 12px; }
+          .gcc-enquiry-box { padding: 20px 15px; }
         }
       `}</style>
     </section>

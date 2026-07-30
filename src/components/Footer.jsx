@@ -214,11 +214,18 @@ const Footer = () => {
         }
 
         @media (max-width: 992px) {
-          .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+          .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+        }
+        @media (max-width: 768px) {
+          .footer-grid { gap: 30px; }
         }
         @media (max-width: 576px) {
-          .footer-grid { grid-template-columns: 1fr; }
+          .footer-grid { grid-template-columns: 1fr; gap: 40px; }
           .footer-bottom { flex-direction: column; gap: 15px; text-align: center; }
+        }
+        @media (max-width: 400px) {
+          .footer-grid { gap: 30px; }
+          .footer-links li a { font-size: 0.9rem; }
         }
       `}</style>
     </footer>

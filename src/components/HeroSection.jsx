@@ -154,11 +154,20 @@ const HeroSection = () => {
           .hero-main-heading { font-size: 3rem; }
           .hero-sub-heading { font-size: 1.2rem; }
         }
+        @media (max-width: 768px) {
+          .hero-main-heading { font-size: 2.6rem; }
+          .hero-sub-heading { font-size: 1.1rem; }
+        }
         @media (max-width: 576px) {
           .hero-main-heading { font-size: 2.2rem; }
           .hero-sub-heading { font-size: 1.05rem; }
-          .hero-button-group { flex-direction: column; width: 100%; }
+          .hero-button-group { flex-direction: column; width: 100%; gap: 12px; }
           .btn-green-solid, .btn-outline-white { width: 100%; text-align: center; }
+        }
+        @media (max-width: 400px) {
+          .hero-main-heading { font-size: 1.8rem; }
+          .hero-sub-heading { font-size: 0.95rem; }
+          .hero-fullscreen { padding-top: 120px; }
         }
       `}</style>
     </section>

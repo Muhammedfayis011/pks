@@ -275,12 +275,32 @@ h1, h2, h3, .font-heading {
 }
 
 /* Responsive utilities */
+@media (max-width: 1200px) {
+  .container { width: 92%; }
+}
+
 @media (max-width: 992px) {
   .section-title { font-size: 2.2rem; }
   .section-padding { padding: 70px 0; }
 }
 
+@media (max-width: 768px) {
+  .section-title { font-size: 2rem; }
+  .section-padding { padding: 60px 0; }
+  .page-main { padding-top: 90px; }
+  .section-subtitle { font-size: 1.05rem; padding: 0 10px; }
+}
+
 @media (max-width: 576px) {
   .section-title { font-size: 1.85rem; }
+  .section-padding { padding: 50px 0; }
   .btn { padding: 12px 24px; font-size: 0.95rem; }
+}
+
+@media (max-width: 400px) {
+  .container { width: 94%; }
+  .section-title { font-size: 1.65rem; }
+  .section-padding { padding: 40px 0; }
+  .page-main { padding-top: 80px; }
+  .btn { padding: 10px 20px; font-size: 0.9rem; }
 }

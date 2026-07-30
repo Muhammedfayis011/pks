@@ -166,12 +166,20 @@ const WhyUs = () => {
         }
 
         @media (max-width: 992px) {
-          .why-grid { grid-template-columns: repeat(2, 1fr); }
+          .why-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
           .commitment-box { grid-template-columns: 1fr; gap: 24px; }
         }
+        @media (max-width: 768px) {
+          .commitment-box { padding: 30px; }
+        }
         @media (max-width: 576px) {
-          .why-grid { grid-template-columns: 1fr; }
+          .why-grid { grid-template-columns: 1fr; gap: 20px; }
           .commitment-check-list { grid-template-columns: 1fr; }
+          .commitment-box { padding: 24px; }
+        }
+        @media (max-width: 400px) {
+          .commitment-box { padding: 20px 15px; }
+          .why-card { padding: 25px 20px; }
         }
       `}</style>
     </section>

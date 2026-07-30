@@ -412,14 +412,25 @@ const ProductsGrid = () => {
         }
 
         @media (max-width: 1200px) {
-          .fruits-grid { grid-template-columns: repeat(3, 1fr); }
+          .fruits-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
         }
         @media (max-width: 992px) {
-          .fruits-grid { grid-template-columns: repeat(2, 1fr); }
+          .fruits-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
           .bulk-banner { flex-direction: column; text-align: center; gap: 24px; }
         }
+        @media (max-width: 768px) {
+          .filter-buttons { justify-content: center; }
+          .products-header { flex-direction: column; gap: 20px; }
+          .search-box { width: 100%; max-width: none; }
+        }
         @media (max-width: 576px) {
-          .fruits-grid { grid-template-columns: 1fr; }
+          .fruits-grid { grid-template-columns: 1fr; gap: 16px; }
+          .fruit-img-wrapper { height: 250px; } /* taller image on full width mobile */
+          .filter-btn { padding: 8px 16px; font-size: 0.8rem; }
+        }
+        @media (max-width: 400px) {
+          .fruit-img-wrapper { height: 200px; }
+          .bulk-content h3 { font-size: 1.4rem; }
         }
       `}</style>
     </section>
