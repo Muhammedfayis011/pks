@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { fruitsData } from '../data/fruitsData';
-import { Search, Filter, ArrowUpRight, Sparkles, ShoppingBag, ChevronRight } from 'lucide-react';
+import { Search, ShoppingBag, ChevronRight } from 'lucide-react';
 
 const ProductsGrid = () => {
   const [activeCategory, setActiveCategory] = useState('All');

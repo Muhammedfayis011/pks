@@ -1,6 +1,6 @@
 import React from 'react';
 import { gccCountries } from '../data/fruitsData';
-import { Phone, Globe2, Plane, Ship, Building2, ExternalLink } from 'lucide-react';
+import { Phone, Globe2, Plane, Ship, Building2 } from 'lucide-react';
 
 const GccSection = () => {
   return (

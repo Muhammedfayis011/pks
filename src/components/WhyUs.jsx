@@ -3,12 +3,12 @@ import { whyChooseUsData } from '../data/fruitsData';
 import { Award, Globe, Shield, Thermometer, Tag, Users, Check } from 'lucide-react';
 
 const iconsMap = [
-  <Award className="text-orange" size={28} />,
-  <Globe className="text-green" size={28} />,
-  <Shield className="text-gold" size={28} />,
-  <Thermometer className="text-orange" size={28} />,
-  <Tag className="text-green" size={28} />,
-  <Users className="text-gold" size={28} />
+  <Award key="award" className="text-orange" size={28} />,
+  <Globe key="globe" className="text-green" size={28} />,
+  <Shield key="shield" className="text-gold" size={28} />,
+  <Thermometer key="thermometer" className="text-orange" size={28} />,
+  <Tag key="tag" className="text-green" size={28} />,
+  <Users key="users" className="text-gold" size={28} />
 ];
 
 const WhyUs = () => {
