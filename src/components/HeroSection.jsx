@@ -150,24 +150,105 @@ const HeroSection = () => {
           transform: translateY(-2px);
         }
 
+        /* Comprehensive Screen Media Queries for Hero Buttons & Layout */
+        @media (min-width: 1400px) {
+          .btn-green-solid, .btn-outline-white {
+            padding: 18px 44px;
+            font-size: 1rem;
+            letter-spacing: 1.2px;
+          }
+          .hero-button-group { gap: 24px; }
+        }
+
+        @media (max-width: 1199px) {
+          .btn-green-solid, .btn-outline-white {
+            padding: 15px 32px;
+            font-size: 0.92rem;
+          }
+          .hero-button-group { gap: 16px; }
+        }
+
         @media (max-width: 992px) {
           .hero-main-heading { font-size: 3rem; }
           .hero-sub-heading { font-size: 1.2rem; }
+          .btn-green-solid, .btn-outline-white {
+            padding: 14px 28px;
+            font-size: 0.9rem;
+          }
         }
+
         @media (max-width: 768px) {
           .hero-main-heading { font-size: 2.6rem; }
           .hero-sub-heading { font-size: 1.1rem; }
+          .hero-button-group { gap: 14px; }
+          .btn-green-solid, .btn-outline-white {
+            padding: 13px 26px;
+            font-size: 0.88rem;
+          }
         }
+
         @media (max-width: 576px) {
           .hero-main-heading { font-size: 2.2rem; }
           .hero-sub-heading { font-size: 1.05rem; }
-          .hero-button-group { flex-direction: column; width: 100%; gap: 12px; }
-          .btn-green-solid, .btn-outline-white { width: 100%; text-align: center; }
+          .hero-button-group {
+            flex-direction: column;
+            width: 100%;
+            gap: 12px;
+          }
+          .btn-green-solid, .btn-outline-white {
+            width: 100%;
+            text-align: center;
+            padding: 14px 20px;
+            font-size: 0.9rem;
+            display: block;
+          }
         }
+
         @media (max-width: 400px) {
           .hero-main-heading { font-size: 1.8rem; }
           .hero-sub-heading { font-size: 0.95rem; }
           .hero-fullscreen { padding-top: 120px; }
+          .btn-green-solid, .btn-outline-white {
+            padding: 12px 16px;
+            font-size: 0.85rem;
+            letter-spacing: 0.8px;
+          }
+        }
+
+        @media (max-width: 360px) {
+          .hero-main-heading { font-size: 1.6rem; }
+          .hero-sub-heading { font-size: 0.85rem; padding: 5px 12px; }
+          .btn-green-solid, .btn-outline-white {
+            padding: 11px 14px;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+          }
+          .hero-button-group { gap: 10px; }
+        }
+
+        @media (max-width: 320px) {
+          .hero-main-heading { font-size: 1.45rem; }
+          .btn-green-solid, .btn-outline-white {
+            padding: 10px 12px;
+            font-size: 0.78rem;
+          }
+        }
+
+        /* Mobile Landscape Orientation */
+        @media (max-height: 500px) and (orientation: landscape) {
+          .hero-fullscreen { min-height: auto; padding: 90px 0 40px 0; }
+          .hero-main-heading { font-size: 2.2rem; margin-bottom: 12px; }
+          .hero-sub-heading { margin-bottom: 16px; }
+          .hero-button-group { flex-direction: row; width: auto; gap: 14px; }
+          .btn-green-solid, .btn-outline-white { width: auto; padding: 10px 20px; font-size: 0.85rem; }
+        }
+
+        /* Touch Device Optimizations */
+        @media (hover: none) and (pointer: coarse) {
+          .btn-green-solid:active, .btn-outline-white:active {
+            transform: scale(0.98);
+            opacity: 0.9;
+          }
         }
       `}</style>
     </section>
