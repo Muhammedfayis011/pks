@@ -1,7 +1,30 @@
 import React from 'react';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Award, Truck, ShieldCheck, Globe2 } from 'lucide-react';
 
 const OverviewSection = () => {
+  const highlights = [
+    {
+      icon: <Award className="text-gold" size={28} />,
+      title: 'Premium Quality',
+      desc: 'Export-grade fruits sourced directly from certified global farms.'
+    },
+    {
+      icon: <Truck className="text-green" size={28} />,
+      title: 'Express Cold-Chain',
+      desc: 'Temperature-controlled air & sea reefer logistics.'
+    },
+    {
+      icon: <Globe2 className="text-orange" size={28} />,
+      title: 'Global & GCC Reach',
+      desc: 'Seamless distribution across India, Saudi Arabia, UAE & Gulf states.'
+    },
+    {
+      icon: <ShieldCheck className="text-gold" size={28} />,
+      title: 'Phytosanitary Compliant',
+      desc: 'Full quarantine clearance & international safety standards.'
+    }
+  ];
+
   return (
     <section className="overview-section section-padding">
       <div className="container">
@@ -32,29 +55,18 @@ const OverviewSection = () => {
             </div>
           </div>
 
-          {/* Right Side Image Showcase */}
+          {/* Right Side Showcase Grid (No hardcoded stored images) */}
           <div className="overview-visual animate-scale-up">
-            <div className="visual-card-stack">
-              <div className="main-fruit-card glass-card">
-                <img 
-                  src="/images/fresh_mangoes_1785409787577.jpg" 
-                  alt="Premium Fruits Export" 
-                  className="showcase-img"
-                />
-                <div className="card-badge-floating top-right">
-                  <strong>100% Fresh</strong>
-                  <p>Quality Inspected</p>
+            <div className="overview-features-grid">
+              {highlights.map((h, i) => (
+                <div key={i} className="overview-feature-card glass-card">
+                  <div className="feature-icon-box">{h.icon}</div>
+                  <div className="feature-text-box">
+                    <h3>{h.title}</h3>
+                    <p>{h.desc}</p>
+                  </div>
                 </div>
-              </div>
-
-              {/* Secondary Sub-Image */}
-              <div className="sub-fruit-card glass-card">
-                <img 
-                  src="/images/fresh_apples_1785409756246.jpg" 
-                  alt="Fresh Apples" 
-                  className="sub-showcase-img"
-                />
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -104,77 +116,38 @@ const OverviewSection = () => {
           font-size: 1.1rem;
           margin-bottom: 32px;
         }
-        .overview-actions {
-          display: flex;
-          gap: 16px;
+        
+        /* Features Showcase Grid */
+        .overview-features-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 18px;
         }
-        .btn-outline-dark {
-          background: transparent;
-          color: var(--primary);
-          border: 2px solid var(--primary);
-        }
-        .btn-outline-dark:hover {
-          background: var(--primary);
-          color: #fff;
-          transform: translateY(-2px);
-        }
-        .overview-visual {
-          position: relative;
-        }
-        .visual-card-stack {
-          position: relative;
-          padding: 20px;
-        }
-        .main-fruit-card {
-          position: relative;
-          border-radius: var(--radius-lg);
-          overflow: hidden;
-          box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
-        }
-        .showcase-img {
-          width: 100%;
-          height: 380px;
-          object-fit: cover;
-          display: block;
-        }
-        .sub-fruit-card {
-          position: absolute;
-          bottom: -30px;
-          left: -30px;
-          width: 200px;
-          height: 160px;
+        .overview-feature-card {
+          padding: 24px 20px;
           border-radius: var(--radius-md);
-          overflow: hidden;
-          border: 4px solid #ffffff;
-          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+          background: rgba(248, 250, 245, 0.9);
+          border: 1px solid rgba(64, 145, 108, 0.2);
+          transition: all 0.3s ease;
         }
-        .sub-showcase-img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          display: block;
+        .overview-feature-card:hover {
+          transform: translateY(-4px);
+          border-color: var(--primary-accent);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
         }
-        .card-badge-floating {
-          position: absolute;
-          background: rgba(8, 28, 21, 0.9);
-          color: #fff;
-          padding: 10px 18px;
-          border-radius: 12px;
-          border: 1px solid rgba(64, 145, 108, 0.4);
-          backdrop-filter: blur(10px);
+        .feature-icon-box {
+          margin-bottom: 12px;
         }
-        .card-badge-floating.top-right {
-          top: 20px;
-          right: 20px;
+        .feature-text-box h3 {
+          font-size: 1.05rem;
+          color: var(--primary);
+          margin-bottom: 6px;
+          font-weight: 700;
         }
-        .card-badge-floating strong {
-          display: block;
-          color: var(--accent-gold);
-          font-size: 0.9rem;
-        }
-        .card-badge-floating p {
-          font-size: 0.75rem;
-          color: #d8f3dc;
+        .feature-text-box p {
+          font-size: 0.85rem;
+          color: var(--text-muted);
+          line-height: 1.5;
           margin: 0;
         }
 
@@ -183,21 +156,12 @@ const OverviewSection = () => {
             grid-template-columns: 1fr;
             gap: 40px;
           }
-          .sub-fruit-card {
-            display: none;
-          }
-        }
-        @media (max-width: 768px) {
-          .overview-grid { gap: 30px; }
-          .main-showcase { height: 400px; }
         }
         @media (max-width: 576px) {
-          .main-showcase { height: 350px; }
-          .highlight-boxes { grid-template-columns: 1fr; gap: 15px; }
-        }
-        @media (max-width: 400px) {
-          .main-showcase { height: 280px; }
-          .overview-content h2 { font-size: 1.8rem; }
+          .overview-features-grid {
+            grid-template-columns: 1fr;
+            gap: 14px;
+          }
         }
       `}</style>
     </section>
