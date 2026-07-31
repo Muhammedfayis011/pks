@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const HeroSection = () => {
   return (
     <section id="home" className="hero-fullscreen">
@@ -77,16 +76,16 @@ const HeroSection = () => {
           font-size: 1.15rem;
           font-weight: 600;
           letter-spacing: 1px;
-          margin-bottom: 16px;
+          margin-bottom: 20px;
         }
         .hero-main-heading {
           font-family: 'Playfair Display', serif;
           font-size: 4.2rem;
           font-weight: 700;
           letter-spacing: -0.5px;
-          line-height: 1.15;
+          line-height: 1.2;
           color: #ffffff;
-          margin-bottom: 20px;
+          margin-bottom: 24px;
           text-shadow: 0 4px 25px rgba(0,0,0,0.6);
         }
         .hero-sub-heading {
@@ -98,10 +97,10 @@ const HeroSection = () => {
           font-weight: 600;
           letter-spacing: 1.2px;
           text-transform: uppercase;
-          margin-bottom: 30px;
+          margin-bottom: 36px;
           background: rgba(233, 196, 106, 0.12);
           border: 1px solid rgba(233, 196, 106, 0.3);
-          padding: 7px 18px;
+          padding: 8px 22px;
           border-radius: 30px;
           backdrop-filter: blur(8px);
           box-shadow: 0 4px 15px rgba(0,0,0,0.3);
@@ -150,7 +149,8 @@ const HeroSection = () => {
           transform: translateY(-2px);
         }
 
-        /* Comprehensive Screen Media Queries for Hero Buttons & Layout */
+        /* ── Comprehensive Mobile & Screen Media Queries ────────────── */
+
         @media (min-width: 1400px) {
           .btn-green-solid, .btn-outline-white {
             padding: 18px 44px;
@@ -169,113 +169,155 @@ const HeroSection = () => {
         }
 
         @media (max-width: 992px) {
-          .hero-main-heading { font-size: 3rem; }
-          .hero-sub-heading { font-size: 1.2rem; }
+          .hero-main-heading { font-size: 3rem; margin-bottom: 22px; }
+          .hero-sub-heading { font-size: 1.15rem; margin-bottom: 32px; }
           .btn-green-solid, .btn-outline-white {
-            padding: 14px 28px;
+            padding: 14px 30px;
             font-size: 0.9rem;
           }
         }
 
+        /* Mobile View (max-width: 768px) */
         @media (max-width: 768px) {
-          .hero-main-heading { font-size: 2.6rem; }
-          .hero-sub-heading { font-size: 1.1rem; }
-          .hero-button-group { gap: 14px; }
+          .hero-fullscreen {
+            padding-top: 150px;
+            padding-bottom: 70px;
+          }
+          .hero-tag-pill {
+            margin-top: 30px;
+            margin-bottom: 22px;
+          }
+          .hero-main-heading {
+            font-size: 2.6rem;
+            line-height: 1.25;
+            margin-bottom: 28px;
+          }
+          .hero-sub-heading {
+            font-size: 1rem;
+            margin-bottom: 40px;
+            padding: 8px 20px;
+          }
+          .hero-button-group {
+            gap: 16px;
+            margin-top: 10px;
+          }
           .btn-green-solid, .btn-outline-white {
-            padding: 13px 26px;
+            padding: 13px 32px 13px 26px; /* Generous right padding */
             font-size: 0.88rem;
           }
         }
 
+        /* Small Mobile Devices (max-width: 576px) */
         @media (max-width: 576px) {
           .hero-fullscreen {
-            padding-top: 130px;
+            padding-top: 140px;
             padding-bottom: 60px;
           }
+          /* Fresh export express pill top margin */
+          .hero-tag-pill {
+            margin-top: 40px;
+            margin-bottom: 24px;
+          }
+          /* Clear line gaps between heading lines */
           .hero-main-heading {
-            font-size: 2.5rem;
-            line-height: 1.18;
-            margin-bottom: 26px; /* Extra gap after main heading */
+            font-size: 2.3rem;
+            line-height: 1.3;
+            margin-bottom: 30px; /* Spacious gap after main heading */
           }
           .hero-sub-heading {
             font-size: 0.85rem;
-            padding: 6px 14px;
-            letter-spacing: 0.8px;
-            margin-bottom: 40px;
+            padding: 8px 18px;
+            letter-spacing: 0.9px;
+            margin-bottom: 44px; /* Spacious gap before buttons */
+            line-height: 1.4;
           }
+          /* Button group layout with extra right padding */
           .hero-button-group {
+            display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            width: auto;
-            gap: 12px;
-            margin-top: 30px; /* Moves buttons down towards bottom */
+            gap: 14px;
+            margin-top: 12px;
           }
           .btn-green-solid, .btn-outline-white {
             width: auto;
-            padding: 11px 22px;
-            font-size: 0.85rem;
-            letter-spacing: 0.6px;
+            padding: 12px 34px 12px 24px; /* Extra padding to the right */
+            font-size: 0.86rem;
+            letter-spacing: 0.8px;
+            margin-right: 4px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
           }
         }
 
+        /* Extra Small Mobile Devices (max-width: 400px) */
         @media (max-width: 400px) {
+          .hero-fullscreen {
+            padding-top: 130px;
+            padding-bottom: 50px;
+          }
+          .hero-tag-pill {
+            margin-top: 35px;
+            margin-bottom: 20px;
+          }
           .hero-main-heading {
-            font-size: 2.1rem;
-            margin-bottom: 22px;
+            font-size: 2rem;
+            line-height: 1.32;
+            margin-bottom: 26px;
           }
           .hero-sub-heading {
             font-size: 0.78rem;
-            padding: 5px 12px;
-            letter-spacing: 0.6px;
-            margin-bottom: 35px;
+            padding: 7px 16px;
+            letter-spacing: 0.7px;
+            margin-bottom: 38px;
           }
-          .hero-fullscreen { padding-top: 110px; padding-bottom: 50px; }
-          .hero-button-group { gap: 10px; margin-top: 25px; }
+          .hero-button-group {
+            gap: 12px;
+          }
           .btn-green-solid, .btn-outline-white {
-            padding: 10px 18px;
-            font-size: 0.8rem;
-            letter-spacing: 0.4px;
+            padding: 11px 30px 11px 20px; /* Right padding extra */
+            font-size: 0.82rem;
           }
         }
 
+        /* Ultra Small Mobile Devices (max-width: 360px) */
         @media (max-width: 360px) {
-          .hero-main-heading {
-            font-size: 1.8rem;
+          .hero-fullscreen {
+            padding-top: 120px;
+            padding-bottom: 45px;
+          }
+          .hero-tag-pill {
+            margin-top: 30px;
             margin-bottom: 18px;
+          }
+          .hero-main-heading {
+            font-size: 1.75rem;
+            line-height: 1.35;
+            margin-bottom: 22px;
           }
           .hero-sub-heading {
             font-size: 0.72rem;
-            padding: 4px 10px;
-            letter-spacing: 0.4px;
-            margin-bottom: 28px;
+            padding: 6px 14px;
+            margin-bottom: 32px;
           }
-          .hero-button-group { gap: 8px; margin-top: 20px; }
-          .btn-green-solid, .btn-outline-white {
-            padding: 9px 15px;
-            font-size: 0.75rem;
-            letter-spacing: 0.3px;
+          .hero-button-group {
+            gap: 10px;
           }
-        }
-
-        @media (max-width: 320px) {
-          .hero-main-heading { font-size: 1.6rem; margin-bottom: 16px; }
-          .hero-sub-heading { font-size: 0.68rem; margin-bottom: 22px; }
           .btn-green-solid, .btn-outline-white {
-            padding: 8px 12px;
-            font-size: 0.72rem;
+            padding: 10px 26px 10px 18px; /* Right padding extra */
+            font-size: 0.78rem;
           }
         }
 
         /* Mobile Landscape Orientation */
         @media (max-height: 500px) and (orientation: landscape) {
-          .hero-fullscreen { min-height: auto; padding: 90px 0 40px 0; }
-          .hero-main-heading { font-size: 2.2rem; margin-bottom: 12px; }
-          .hero-sub-heading { margin-bottom: 16px; }
+          .hero-fullscreen { min-height: auto; padding: 100px 0 45px 0; }
+          .hero-tag-pill { margin-top: 20px; margin-bottom: 14px; }
+          .hero-main-heading { font-size: 2.1rem; line-height: 1.25; margin-bottom: 18px; }
+          .hero-sub-heading { margin-bottom: 24px; }
           .hero-button-group { flex-direction: row; width: auto; gap: 14px; }
-          .btn-green-solid, .btn-outline-white { width: auto; padding: 10px 20px; font-size: 0.85rem; }
+          .btn-green-solid, .btn-outline-white { width: auto; padding: 10px 28px 10px 20px; font-size: 0.85rem; }
         }
 
         /* Touch Device Optimizations */
