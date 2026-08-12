@@ -45,13 +45,13 @@ const GccSection = () => {
             </div>
 
             <div className="enquiry-numbers">
-              <a href="tel:+966568922844" className="phone-btn">
-                <span>Line 1</span>
-                <strong>+966 56 892 2844</strong>
+              <a href="tel:+919847113208" className="phone-btn">
+                <span>India Contact</span>
+                <strong>+91 98471 13208</strong>
               </a>
-              <a href="tel:+966545137183" className="phone-btn">
-                <span>Line 2</span>
-                <strong>+966 54 513 7183</strong>
+              <a href="tel:+966568922844" className="phone-btn">
+                <span>GCC Line</span>
+                <strong>+966 56 892 2844</strong>
               </a>
             </div>
           </div>

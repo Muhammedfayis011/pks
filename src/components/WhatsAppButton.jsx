@@ -3,7 +3,7 @@ import './WhatsAppButton.css';
 
 export default function WhatsAppButton() {
   const phoneNumber = '966568922844';
-  const message = encodeURIComponent('Hello PKS Agro, I would like to make an inquiry.');
+  const message = encodeURIComponent('Hello PKS Fruits, I would like to make an inquiry.');
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   return (
@@ -12,9 +12,9 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       className="whatsapp-float-btn"
-      aria-label="Chat on WhatsApp with PKS"
+      aria-label="Chat on WhatsApp with PKS Fruits"
     >
-      <span className="whatsapp-tooltip">Chat with us +966 56 892 2844</span>
+      <span className="whatsapp-tooltip">Chat on WhatsApp +966 56 892 2844</span>
 
       {/* Blooming Aura Glow Rings */}
       <div className="whatsapp-bloom-ring whatsapp-bloom-ring-1" />

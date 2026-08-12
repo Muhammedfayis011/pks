@@ -22,13 +22,13 @@ const Navbar = () => {
       <div className="top-bar">
         <div className="container top-bar-content">
           <div className="top-bar-left">
-            <span className="top-badge">GCC TRADE ENQUIRIES</span>
-            <a href="tel:+966568922844" className="top-link">
-              <Phone size={13} /> +966 56 892 2844
+            <span className="top-badge">TRADE ENQUIRIES</span>
+            <a href="tel:+919847113208" className="top-link">
+              <Phone size={13} /> 🇮🇳 +91 98471 13208
             </a>
             <span className="divider">|</span>
-            <a href="tel:+966545137183" className="top-link">
-              +966 54 513 7183
+            <a href="tel:+966568922844" className="top-link">
+              🇸🇦 +966 56 892 2844
             </a>
           </div>
           <div className="top-bar-right">
@@ -43,11 +43,12 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="container navbar-container">
           {/* Logo */}
-          <Link to="/" className="brand-logo">
-            <div className="logo-text">
-              <span className="brand-name">PKS <span className="highlight">FRUITS</span></span>
-              <span className="brand-sub">IMPORTERS • EXPORTERS • WHOLESALE</span>
-            </div>
+          <Link to="/" className="brand-logo" aria-label="PKS Fruits Home">
+            <img 
+              src="/images/pks_logo_white.png" 
+              alt="PKS Fruits Logo" 
+              className="navbar-brand-logo" 
+            />
           </Link>
 
           {/* Desktop Nav Links */}
@@ -85,8 +86,9 @@ const Navbar = () => {
             <Link to="/why-us" onClick={() => setMobileMenuOpen(false)}>Why Choose Us</Link>
             <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
             <div className="mobile-contact-info">
-              <p><strong>GCC Enquiries:</strong> +966 56 892 2844</p>
-              <p><strong>Email:</strong> info@pksfruits.com</p>
+              <p><strong>India Contact:</strong> +91 98471 13208</p>
+              <p><strong>GCC Division:</strong> +966 56 892 2844</p>
+              <p><strong>Email:</strong> Pksfruitsworld@gmail.com</p>
             </div>
           </div>
         )}
@@ -185,41 +187,22 @@ const Navbar = () => {
         .brand-logo {
           display: flex;
           align-items: center;
-          gap: 12px;
           text-decoration: none;
         }
-        .logo-icon {
-          width: 44px;
-          height: 44px;
-          background: linear-gradient(135deg, var(--primary-accent), var(--primary));
-          border-radius: 12px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: var(--accent-gold);
-          box-shadow: 0 4px 15px rgba(64, 145, 108, 0.4);
+        .navbar-brand-logo {
+          height: 64px;
+          max-height: 70px;
+          width: auto;
+          object-fit: contain;
+          background: transparent !important;
+          padding: 0 !important;
+          border-radius: 0 !important;
+          box-shadow: none !important;
+          transition: transform 0.3s ease;
+          filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
         }
-        .logo-text {
-          display: flex;
-          flex-direction: column;
-        }
-        .brand-name {
-          font-family: var(--font-heading);
-          font-size: 1.45rem;
-          font-weight: 800;
-          color: #fff;
-          letter-spacing: 0.5px;
-          line-height: 1;
-        }
-        .brand-name .highlight {
-          color: var(--accent-orange);
-        }
-        .brand-sub {
-          font-size: 0.65rem;
-          color: var(--accent-gold);
-          font-weight: 600;
-          letter-spacing: 1px;
-          margin-top: 3px;
+        .navbar-brand-logo:hover {
+          transform: scale(1.04);
         }
         .nav-links {
           display: flex;

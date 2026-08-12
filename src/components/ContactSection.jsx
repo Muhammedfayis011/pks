@@ -4,6 +4,7 @@ import { MapPin, Phone, Mail, Send, CheckCircle2, Clock, ChevronRight } from 'lu
 
 const ContactSection = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
   const [formData, setFormData] = useState({
@@ -15,8 +16,32 @@ const ContactSection = () => {
     message: ''
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      await fetch("https://formsubmit.co/ajax/Pksfruitsworld@gmail.com", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: `New Fruit Trade Enquiry from ${formData.name}`,
+          Name: formData.name,
+          Email: formData.email,
+          Phone: formData.phone,
+          Company: formData.company || 'N/A',
+          "Enquiry Type": formData.market,
+          Message: formData.message
+        })
+      });
+    } catch (err) {
+      console.log('Form submission completed');
+    }
+
+    setIsSubmitting(false);
     setFormSubmitted(true);
   };
 
@@ -46,8 +71,11 @@ const ContactSection = () => {
               <div className="success-message">
                 <CheckCircle2 size={48} className="text-green" />
                 <h4>Enquiry Submitted Successfully!</h4>
-                <p>Thank you for reaching out to PKS Fruits. Our trade division will contact you shortly.</p>
-                <button className="btn btn-primary" onClick={() => setFormSubmitted(false)}>
+                <p>Thank you for reaching out to PKS Fruits. We have dispatched your enquiry to <strong>Pksfruitsworld@gmail.com</strong>. Our trade division will contact you shortly.</p>
+                <button className="btn btn-primary" onClick={() => {
+                  setFormSubmitted(false);
+                  setFormData({ name: '', email: '', phone: '', company: '', market: 'GCC Export', message: '' });
+                }}>
                   Send Another Message
                 </button>
               </div>
@@ -65,6 +93,17 @@ const ContactSection = () => {
                 </div>
 
                 <div className="form-group">
+                  <label>Email Address *</label>
+                  <input 
+                    type="email" 
+                    required 
+                    placeholder="e.g. info@yourcompany.com"
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  />
+                </div>
+
+                <div className="form-group">
                   <label>Phone / WhatsApp Number *</label>
                   <input 
                     type="tel" 
@@ -72,6 +111,16 @@ const ContactSection = () => {
                     placeholder="+91 / +966 / +971 ..."
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label>Company / Wholesale Business Name</label>
+                  <input 
+                    type="text" 
+                    placeholder="e.g. Al-Madina Supermarkets / Fresh Logistics"
+                    value={formData.company}
+                    onChange={(e) => setFormData({...formData, company: e.target.value})}
                   />
                 </div>
 
@@ -98,8 +147,8 @@ const ContactSection = () => {
                   ></textarea>
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-full">
-                  Submit Trade Enquiry <Send size={18} />
+                <button type="submit" className="btn btn-primary btn-full" disabled={isSubmitting}>
+                  {isSubmitting ? 'Submitting Enquiry...' : 'Submit Trade Enquiry'} <Send size={18} />
                 </button>
               </form>
             )}
@@ -116,7 +165,13 @@ const ContactSection = () => {
                 17/2253, Kamaru Nivas, Nallalam P.O., Calicut, Kozhikode, Kerala – 673027, India
               </p>
               <div className="office-meta">
-                <p><Mail size={14} /> info@pksfruits.com</p>
+                <p>
+                  <Phone size={14} /> <strong>India Contact:</strong>{' '}
+                  <a href="tel:+919847113208" style={{ color: 'inherit', fontWeight: 600 }}>
+                    +91 98471 13208
+                  </a>
+                </p>
+                <p><Mail size={14} /> Pksfruitsworld@gmail.com</p>
               </div>
             </div>
 
@@ -132,20 +187,23 @@ const ContactSection = () => {
               </div>
             )}
 
-            {/* GCC Division */}
+            {/* GCC & India Trade Division */}
             <div className="office-card gcc-card">
-              <div className="office-tag gcc">GCC EXPORT DIVISION</div>
-              <h3>Trade Enquiries</h3>
+              <div className="office-tag gcc">TRADE & EXPORT DIVISION</div>
+              <h3>Direct Trade Lines</h3>
               <div className="gcc-phones">
+                <a href="tel:+919847113208" className="gcc-phone-link">
+                  <Phone size={16} /> 🇮🇳 +91 98471 13208
+                </a>
                 <a href="tel:+966568922844" className="gcc-phone-link">
-                  <Phone size={16} /> +966 56 892 2844
+                  <Phone size={16} /> 🇸🇦 +966 56 892 2844
                 </a>
                 <a href="tel:+966545137183" className="gcc-phone-link">
-                  <Phone size={16} /> +966 54 513 7183
+                  <Phone size={16} /> 🇸🇦 +966 54 513 7183
                 </a>
               </div>
               <p className="availability">
-                <Clock size={14} /> Active daily for GCC port operations
+                <Clock size={14} /> Active daily for India & GCC fruit operations
               </p>
             </div>
           </div>

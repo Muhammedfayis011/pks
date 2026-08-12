@@ -1,166 +1,77 @@
-/* ─── Loading Screen (Minimal Heavy Blur Hero + Micro 36px Ring + PKS) ─── */
+/* ─── Loading Screen (Pure White Background + Centered Logo + Small Round Ring) ─── */
 
 .ls-overlay {
   position: fixed;
   inset: 0;
-  z-index: 9999;
+  z-index: 99999;
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ls-overlay--exit {
   opacity: 0;
   pointer-events: none;
-  transform: scale(1.04);
 }
 
-/* ── Heavy Blur Backdrop over Hero Section ────────────────────────── */
-.ls-blur-backdrop {
-  position: absolute;
-  inset: 0;
-  backdrop-filter: blur(40px) brightness(0.55) saturate(1.4);
-  -webkit-backdrop-filter: blur(40px) brightness(0.55) saturate(1.4);
-  background: rgba(8, 28, 21, 0.55);
-  z-index: 0;
-}
-
-/* ── Clean Minimal Content ─────────────────────────────────────── */
+/* ── Centered Content Container ─────────────────────────────────── */
 .ls-minimal-content {
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
-  text-align: center;
-  padding: 0 16px;
-}
-
-/* ── Micro Ring Wrapper (36px x 36px) ────────────────────────── */
-.ls-small-ring-wrap {
-  position: relative;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  padding: 24px;
 }
 
-/* Decorative outer spinning accent */
-.ls-spin-ring-sm {
-  position: absolute;
-  inset: -3px;
+/* ── Centered PKS Fruits Logo ─────────────────────────────────────── */
+.ls-logo-img {
+  max-width: 320px;
+  width: 70vw;
+  height: auto;
+  object-fit: contain;
+  animation: logoPulse 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes logoPulse {
+  0% {
+    transform: scale(0.96);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+}
+
+/* ── Small Round Loading Ring Spinner ───────────────────────────── */
+.ls-ring-spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(27, 67, 50, 0.12);
+  border-top-color: #2d6a4f;
+  border-right-color: #f4a261;
   border-radius: 50%;
-  border: 1.5px solid transparent;
-  border-top-color: rgba(233, 196, 106, 0.85);
-  border-right-color: rgba(64, 145, 108, 0.6);
-  animation: spinRingSm 1.5s linear infinite;
+  animation: spinnerRotate 0.8s linear infinite;
+  margin-top: 24px;
 }
 
-@keyframes spinRingSm {
-  to { transform: rotate(360deg); }
-}
-
-.ls-svg-sm {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* ── PKS Text ────────────────────────────────────────────────── */
-.ls-title-minimal {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  margin: 0;
-  background: linear-gradient(135deg, #ffffff 20%, #e9c46a 60%, #f4a261 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  display: inline-block;
-  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.3));
-}
-
-/* ── Comprehensive Responsive Media Queries ──────────────────────── */
-
-/* Extra Large Screens / 4K (>= 1440px) */
-@media (min-width: 1440px) {
-  .ls-small-ring-wrap {
-    width: 42px;
-    height: 42px;
-  }
-  .ls-title-minimal {
-    font-size: 2.3rem;
-    letter-spacing: 2.5px;
+@keyframes spinnerRotate {
+  to {
+    transform: rotate(360deg);
   }
 }
 
-/* Medium Desktop & Tablets (769px - 1024px) */
-@media (max-width: 1024px) {
-  .ls-minimal-content {
-    gap: 12px;
+@media (max-width: 576px) {
+  .ls-logo-img {
+    max-width: 240px;
+    width: 80vw;
   }
-  .ls-title-minimal {
-    font-size: 1.85rem;
-  }
-}
-
-/* Mobile Devices (481px - 768px) */
-@media (max-width: 768px) {
-  .ls-minimal-content {
-    gap: 10px;
-  }
-  .ls-small-ring-wrap {
-    width: 34px;
-    height: 34px;
-  }
-  .ls-title-minimal {
-    font-size: 1.65rem;
-    letter-spacing: 1.5px;
-  }
-}
-
-/* Small Mobile Devices (360px - 480px) */
-@media (max-width: 480px) {
-  .ls-minimal-content {
-    gap: 8px;
-  }
-  .ls-small-ring-wrap {
-    width: 30px;
-    height: 30px;
-  }
-  .ls-title-minimal {
-    font-size: 1.45rem;
-    letter-spacing: 1px;
-  }
-}
-
-/* Ultra Small Mobile Devices (<= 359px) */
-@media (max-width: 359px) {
-  .ls-small-ring-wrap {
+  .ls-ring-spinner {
     width: 26px;
     height: 26px;
-  }
-  .ls-title-minimal {
-    font-size: 1.3rem;
-    letter-spacing: 0.5px;
-  }
-}
-
-/* Mobile Landscape Orientation (max-height 550px) */
-@media (max-height: 550px) and (orientation: landscape) {
-  .ls-minimal-content {
-    gap: 6px;
-  }
-  .ls-small-ring-wrap {
-    width: 28px;
-    height: 28px;
-  }
-  .ls-title-minimal {
-    font-size: 1.35rem;
+    border-width: 2.5px;
+    margin-top: 18px;
   }
 }

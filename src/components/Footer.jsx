@@ -14,7 +14,11 @@ const Footer = () => {
           {/* Brand Info */}
           <div className="footer-col brand-col">
             <div className="footer-logo">
-              <span className="logo-text">PKS FRUITS</span>
+              <img 
+                src="/images/pks_logo_white.png" 
+                alt="PKS Fruits Logo" 
+                className="footer-brand-logo" 
+              />
             </div>
             <p className="footer-tagline">
               Connecting Global Farms with Growing Markets. <br />
@@ -38,21 +42,21 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* GCC Trade */}
+          {/* Trade & Export Division */}
           <div className="footer-col">
-            <h4>GCC Export Division</h4>
-            <p className="gcc-sub">Saudi Arabia, UAE, Qatar, Oman, Kuwait, Bahrain</p>
+            <h4>Trade & Export Division</h4>
+            <p className="gcc-sub">India & GCC (Saudi Arabia, UAE, Qatar, Oman, Kuwait, Bahrain)</p>
             <div className="footer-contact-item">
-              <Phone size={16} className="text-orange" />
-              <span>+966 56 892 2844</span>
+              <Phone size={16} className="text-green" />
+              <span>🇮🇳 +91 98471 13208 (India)</span>
             </div>
             <div className="footer-contact-item">
               <Phone size={16} className="text-orange" />
-              <span>+966 54 513 7183</span>
+              <span>🇸🇦 +966 56 892 2844 (GCC)</span>
             </div>
             <div className="footer-contact-item">
               <Mail size={16} className="text-gold" />
-              <span>info@pksfruits.com</span>
+              <span>Pksfruitsworld@gmail.com</span>
             </div>
           </div>
 
@@ -94,26 +98,18 @@ const Footer = () => {
           margin-bottom: 60px;
         }
         .footer-logo {
-          display: flex;
-          align-items: center;
-          gap: 10px;
           margin-bottom: 16px;
         }
-        .footer-logo .logo-icon {
-          width: 36px;
-          height: 36px;
-          background: var(--primary-accent);
-          border-radius: 8px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: var(--accent-gold);
-        }
-        .footer-logo .logo-text {
-          font-family: var(--font-heading);
-          font-size: 1.4rem;
-          font-weight: 800;
-          color: #fff;
+        .footer-brand-logo {
+          height: 68px;
+          max-height: 75px;
+          width: auto;
+          object-fit: contain;
+          background: transparent !important;
+          padding: 0 !important;
+          border-radius: 0 !important;
+          box-shadow: none !important;
+          filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
         }
         .footer-tagline {
           color: var(--accent-gold);
