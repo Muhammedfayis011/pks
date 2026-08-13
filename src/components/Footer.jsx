@@ -60,17 +60,16 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Offices */}
+          {/* Office Locations / Key Hubs */}
           <div className="footer-col">
-            <h4>Key Hubs</h4>
-            <div className="hub-footer-block">
-              <strong>Registered Office:</strong>
-              <p>Calicut, Kozhikode, Kerala – 673027, India</p>
-            </div>
-            <div className="hub-footer-block">
-              <strong>Corporate Office:</strong>
-              <p>Ulwe, Navi Mumbai – 410206, Maharashtra</p>
-            </div>
+            <h4>Office Locations</h4>
+            <ul className="footer-hubs-list" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+              <li style={{ marginBottom: '6px', fontSize: '0.9rem', color: '#d8f3dc' }}>📍 <strong>MUMBAI</strong></li>
+              <li style={{ marginBottom: '6px', fontSize: '0.9rem', color: '#d8f3dc' }}>📍 <strong>BENGALURU</strong></li>
+              <li style={{ marginBottom: '6px', fontSize: '0.9rem', color: '#d8f3dc' }}>📍 <strong>CHENNAI</strong></li>
+              <li style={{ marginBottom: '6px', fontSize: '0.9rem', color: '#d8f3dc' }}>📍 <strong>MANGALORE</strong></li>
+              <li style={{ marginBottom: '6px', fontSize: '0.9rem', color: '#d8f3dc' }}>📍 <strong>CALICUT</strong></li>
+            </ul>
           </div>
         </div>
 

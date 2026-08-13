@@ -187,6 +187,19 @@ const ContactSection = () => {
               </div>
             )}
 
+            {/* Office Locations & Network Hubs */}
+            <div className="office-card hubs-card">
+              <div className="office-tag corporate">NETWORK & OFFICE HUBS</div>
+              <h3>Key Office Locations</h3>
+              <div className="locations-badge-list">
+                <span className="location-city-badge">MUMBAI</span>
+                <span className="location-city-badge">BENGALURU</span>
+                <span className="location-city-badge">CHENNAI</span>
+                <span className="location-city-badge">MANGALORE</span>
+                <span className="location-city-badge">CALICUT</span>
+              </div>
+            </div>
+
             {/* GCC & India Trade Division */}
             <div className="office-card gcc-card">
               <div className="office-tag gcc">TRADE & EXPORT DIVISION</div>
@@ -455,6 +468,31 @@ const ContactSection = () => {
           color: var(--text-muted);
           border-top: 1px solid rgba(0,0,0,0.06);
           padding-top: 10px;
+        }
+        .hubs-card {
+          border: 1px solid rgba(64, 145, 108, 0.3);
+        }
+        .locations-badge-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin-top: 12px;
+        }
+        .location-city-badge {
+          background: rgba(27, 67, 50, 0.08);
+          color: var(--primary);
+          border: 1px solid rgba(64, 145, 108, 0.3);
+          padding: 6px 14px;
+          border-radius: 20px;
+          font-weight: 700;
+          font-size: 0.82rem;
+          letter-spacing: 0.5px;
+          transition: all 0.25s ease;
+        }
+        .location-city-badge:hover {
+          background: var(--primary);
+          color: #ffffff;
+          transform: translateY(-2px);
         }
         .gcc-card {
           background: linear-gradient(135deg, #081c15, #1b4332);

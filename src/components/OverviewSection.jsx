@@ -40,8 +40,8 @@ const OverviewSection = () => {
 
             <p className="overview-lead-text">
               PKS Fruits is a leading Indian fruit trading company specializing in the import, export, 
-              and wholesale distribution of premium fresh fruits. With strategically located operations in 
-              <strong> Kerala</strong> and <strong>Mumbai</strong>, we connect trusted global growers with wholesale markets, 
+              and wholesale distribution of premium fresh fruits. With strategically located operations across 
+              <strong> Mumbai</strong>, <strong>Bengaluru</strong>, <strong>Chennai</strong>, <strong>Mangalore</strong>, and <strong>Calicut</strong>, we connect trusted global growers with wholesale markets, 
               retailers, supermarkets, and distributors across India and the GCC.
             </p>
 
