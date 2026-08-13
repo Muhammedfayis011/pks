@@ -175,17 +175,15 @@ const ContactSection = () => {
               </div>
             </div>
 
-            {/* Corporate Office — Hide on Home Page, Show on Contact Page */}
-            {!isHomePage && (
-              <div className="office-card">
-                <div className="office-tag corporate">CORPORATE OFFICE</div>
-                <h3>Mumbai Office</h3>
-                <p className="address-text">
-                  <MapPin size={18} className="icon" />
-                  7th Floor, B Wing, Office 703, White Woods, Sector 23, Ulwe, Navi Mumbai – 410206, Maharashtra, India
-                </p>
-              </div>
-            )}
+            {/* Corporate Office */}
+            <div className="office-card">
+              <div className="office-tag corporate">CORPORATE OFFICE</div>
+              <h3>Mumbai Corporate Office</h3>
+              <p className="address-text">
+                <MapPin size={18} className="icon" />
+                7th Floor, B Wing, Office 703, White Woods, Sector 23, Ulwe, Navi Mumbai – 410206, Maharashtra, India
+              </p>
+            </div>
 
             {/* Office Locations & Network Hubs */}
             <div className="office-card hubs-card">

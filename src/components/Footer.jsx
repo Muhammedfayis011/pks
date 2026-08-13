@@ -62,14 +62,19 @@ const Footer = () => {
 
           {/* Office Locations / Key Hubs */}
           <div className="footer-col">
-            <h4>Office Locations</h4>
-            <ul className="footer-hubs-list" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: '6px', fontSize: '0.9rem', color: '#d8f3dc' }}>📍 <strong>MUMBAI</strong></li>
-              <li style={{ marginBottom: '6px', fontSize: '0.9rem', color: '#d8f3dc' }}>📍 <strong>BENGALURU</strong></li>
-              <li style={{ marginBottom: '6px', fontSize: '0.9rem', color: '#d8f3dc' }}>📍 <strong>CHENNAI</strong></li>
-              <li style={{ marginBottom: '6px', fontSize: '0.9rem', color: '#d8f3dc' }}>📍 <strong>MANGALORE</strong></li>
-              <li style={{ marginBottom: '6px', fontSize: '0.9rem', color: '#d8f3dc' }}>📍 <strong>CALICUT</strong></li>
-            </ul>
+            <h4>Office Locations & Hubs</h4>
+            <div style={{ marginBottom: '12px', fontSize: '0.86rem', color: '#d8f3dc' }}>
+              <strong style={{ color: 'var(--accent-gold)' }}>Corporate Office:</strong>
+              <p style={{ margin: '2px 0 8px 0', lineHeight: '1.4', color: '#a3b18a' }}>
+                7th Floor, B Wing, Office 703, White Woods, Sector 23, Ulwe, Navi Mumbai – 410206
+              </p>
+            </div>
+            <div style={{ fontSize: '0.86rem', color: '#d8f3dc' }}>
+              <strong style={{ color: 'var(--accent-gold)' }}>Network Hubs:</strong>
+              <p style={{ margin: '2px 0 0 0', fontWeight: 600 }}>
+                MUMBAI • BENGALURU • CHENNAI • MANGALORE • CALICUT
+              </p>
+            </div>
           </div>
         </div>
 
