@@ -19,7 +19,7 @@ export default function LoadingScreen({ duration = 4, onComplete }) {
     <div className={`ls-overlay${done ? ' ls-overlay--exit' : ''}`}>
       <div className="ls-minimal-content">
         <img 
-          src="/images/pks_logo.png" 
+          src="./images/pks_logo.png" 
           alt="PKS Fruits Logo" 
           className="ls-logo-img" 
         />

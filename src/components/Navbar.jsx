@@ -45,7 +45,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="brand-logo" aria-label="PKS Fruits Home">
             <img 
-              src="/images/pks_logo_white.png" 
+              src="./images/pks_logo_white.png" 
               alt="PKS Fruits Logo" 
               className="navbar-brand-logo" 
             />

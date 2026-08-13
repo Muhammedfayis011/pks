@@ -45,7 +45,7 @@ const HeroSection = () => {
         .hero-bg-image {
           position: absolute;
           inset: 0;
-          background-image: url('/images/hero_export_bg_1785409740002.jpg');
+          background-image: url('./images/hero_export_bg_1785409740002.jpg');
           background-size: cover;
           background-position: center;
           transform: scale(1.05);

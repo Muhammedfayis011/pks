@@ -4,7 +4,7 @@ export const fruitsData = [
     name: 'Apple',
     category: 'Fresh Fruits',
     origin: 'New Zealand / Chile / USA',
-    image: '/images/fresh_apples_1785409756246.jpg',
+    image: './images/fresh_apples_1785409756246.jpg',
     description: 'Crisp, juicy, and naturally sweet premium grade apples.',
     badge: 'Popular Import',
     tags: ['Fresh', 'Wholesale']
@@ -14,7 +14,7 @@ export const fruitsData = [
     name: 'Banana',
     category: 'Bananas & Tropical',
     origin: 'India (Kerala / Tamil Nadu)',
-    image: '/images/fresh_bananas_1785409769433.jpg',
+    image: './images/fresh_bananas_1785409769433.jpg',
     description: 'Export-grade Cavendish bananas, handpicked for ideal ripeness.',
     badge: 'GCC Top Export',
     tags: ['Export Grade', 'Fresh']
@@ -24,7 +24,7 @@ export const fruitsData = [
     name: 'Orange',
     category: 'Citrus',
     origin: 'Egypt / South Africa',
-    image: '/images/orange_1785418099620.jpg',
+    image: './images/orange_1785418099620.jpg',
     description: 'Vibrant, vitamin-C rich citrus oranges.',
     badge: 'Juice Grade',
     tags: ['Citrus', 'Sweet']
@@ -34,7 +34,7 @@ export const fruitsData = [
     name: 'Mango',
     category: 'Seasonal Specialties',
     origin: 'India (Ratnagiri / Kerala)',
-    image: '/images/fresh_mangoes_1785409787577.jpg',
+    image: './images/fresh_mangoes_1785409787577.jpg',
     description: 'Rich aromatic sweetness and vibrant golden flesh.',
     badge: 'King of Fruits',
     tags: ['Aromatic', 'Indian']
@@ -44,7 +44,7 @@ export const fruitsData = [
     name: 'Grapefruit',
     category: 'Citrus',
     origin: 'South Africa / Turkey',
-    image: '/images/grapefruit_1785418116588.jpg',
+    image: './images/grapefruit_1785418116588.jpg',
     description: 'Perfect balance of tangy and sweet with deep pink flesh.',
     badge: 'Healthy Choice',
     tags: ['Tangy', 'Citrus']
@@ -54,7 +54,7 @@ export const fruitsData = [
     name: 'Strawberry',
     category: 'Berries',
     origin: 'India (Mahabaleshwar) / Egypt',
-    image: '/images/strawberry_1785418134277.jpg',
+    image: './images/strawberry_1785418134277.jpg',
     description: 'Bright red, fragrant strawberries with intense sweetness.',
     badge: 'Cold Chain Supply',
     tags: ['Berry', 'Fresh']
@@ -64,7 +64,7 @@ export const fruitsData = [
     name: 'Blueberry',
     category: 'Berries',
     origin: 'Peru / Chile',
-    image: '/images/blueberry_1785418151414.jpg',
+    image: './images/blueberry_1785418151414.jpg',
     description: 'Plump, firm blueberries rich in antioxidants.',
     badge: 'Superfood',
     tags: ['Superfood', 'Berry']
@@ -74,7 +74,7 @@ export const fruitsData = [
     name: 'Raspberry',
     category: 'Berries',
     origin: 'Spain / Mexico',
-    image: '/images/raspberry_1785418168504.jpg',
+    image: './images/raspberry_1785418168504.jpg',
     description: 'Delicate, sweet-tart red raspberries.',
     badge: 'Air Freight Fresh',
     tags: ['Delicate', 'Berry']
@@ -84,7 +84,7 @@ export const fruitsData = [
     name: 'Blackberry',
     category: 'Berries',
     origin: 'Mexico / USA',
-    image: '/images/blackberry_1785418186750.jpg',
+    image: './images/blackberry_1785418186750.jpg',
     description: 'Deep purple-black berries bursting with rich flavor.',
     badge: 'Gourmet Selection',
     tags: ['Berry', 'Rich']
@@ -94,7 +94,7 @@ export const fruitsData = [
     name: 'Guava',
     category: 'Bananas & Tropical',
     origin: 'India / Thailand',
-    image: '/images/guava.jpg',
+    image: './images/guava.jpg',
     description: 'Aromatic guavas with crunchy outer skin and sweet pulp.',
     badge: 'High Fiber',
     tags: ['Tropical', 'Crunchy']
@@ -104,7 +104,7 @@ export const fruitsData = [
     name: 'Kiwi',
     category: 'Fresh Fruits',
     origin: 'New Zealand / Italy',
-    image: '/images/kiwi.jpg',
+    image: './images/kiwi.jpg',
     description: 'Nutrient-dense kiwifruits with refreshing tangy-sweet flavor.',
     badge: 'Top Seller',
     tags: ['Nutrient Dense']
@@ -114,7 +114,7 @@ export const fruitsData = [
     name: 'Dragon Fruit',
     category: 'Exotic & Special',
     origin: 'Vietnam / India',
-    image: '/images/dragon_fruit.jpg',
+    image: './images/dragon_fruit.jpg',
     description: 'Striking exotic fruit with mild sweet flavor.',
     badge: 'Exotic Premium',
     tags: ['Exotic']
@@ -134,7 +134,7 @@ export const fruitsData = [
     name: 'Lychee',
     category: 'Seasonal Specialties',
     origin: 'India (Bihar/West Bengal) / Madagascar',
-    image: '/images/lychee.jpg',
+    image: './images/lychee.jpg',
     description: 'Translucent, juicy lychees with floral aroma.',
     badge: 'Seasonal Favorite',
     tags: ['Floral']
@@ -154,7 +154,7 @@ export const fruitsData = [
     name: 'Peach',
     category: 'Stone Fruits',
     origin: 'Spain / Turkey / India',
-    image: '/images/peach.jpg',
+    image: './images/peach.jpg',
     description: 'Velvety skin and tender, fragrant flesh.',
     badge: 'Fragrant',
     tags: ['Stone Fruit']
@@ -164,7 +164,7 @@ export const fruitsData = [
     name: 'Pear',
     category: 'Fresh Fruits',
     origin: 'South Africa / Netherlands',
-    image: '/images/pear.jpg',
+    image: './images/pear.jpg',
     description: 'Smooth-textured pears with sweet aromatic juice.',
     badge: 'Export Standard',
     tags: ['Crisp']
@@ -174,7 +174,7 @@ export const fruitsData = [
     name: 'Plum',
     category: 'Stone Fruits',
     origin: 'Chile / Spain',
-    image: '/images/plum.jpg',
+    image: './images/plum.jpg',
     description: 'Rich dark plums featuring sweet tart pulp.',
     badge: 'Rich Flavor',
     tags: ['Stone Fruit']

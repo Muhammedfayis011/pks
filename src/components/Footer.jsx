@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="footer-col brand-col">
             <div className="footer-logo">
               <img 
-                src="/images/pks_logo_white.png" 
+                src="./images/pks_logo_white.png" 
                 alt="PKS Fruits Logo" 
                 className="footer-brand-logo" 
               />

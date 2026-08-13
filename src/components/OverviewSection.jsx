@@ -60,7 +60,7 @@ const OverviewSection = () => {
             {/* Featured Mango Image Showcase */}
             <div className="overview-mango-card">
               <img 
-                src="/images/fresh_mangoes_1785409787577.jpg" 
+                src="./images/fresh_mangoes_1785409787577.jpg" 
                 alt="Premium Fresh Export Mangoes" 
                 className="overview-mango-img"
               />

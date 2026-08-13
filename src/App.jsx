@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import FruitsPage from './pages/FruitsPage';
@@ -37,7 +37,7 @@ function App() {
           onComplete={handleLoadingComplete}
         />
       )}
-      <BrowserRouter>
+      <HashRouter>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -47,7 +47,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <WhatsAppButton />
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
