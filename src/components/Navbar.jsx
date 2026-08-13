@@ -33,7 +33,7 @@ const Navbar = () => {
           </div>
           <div className="top-bar-right">
             <a href="#contact" className="location-link">
-              <MapPin size={13} /> MUMBAI | BENGALURU | CHENNAI | MANGALORE | CALICUT
+              <MapPin size={13} /> Registered Office: Kerala, India | Corporate: Navi Mumbai
             </a>
           </div>
         </div>
